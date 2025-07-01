@@ -15,13 +15,22 @@ export const metadata: BlogMetadata = {
 };
 
 export default function ManagingStateLaravelAngular() {
+  const { theme } = useTheme();
+
+  const getTextStyle = (isHeading = false) => {
+    if (theme === "night") {
+      return { color: isHeading ? "#ffffff" : "#e5e5e5" };
+    }
+    return {};
+  };
+
   return (
     <article className="max-w-4xl mx-auto px-6 py-8 theme-surface rounded-xl shadow-lg">
       <header className="mb-8">
-        <h1 className="text-4xl font-bold theme-text-primary mb-4">
+        <h1 className="text-4xl font-bold mb-4" style={getTextStyle(true)}>
           {metadata.title}
         </h1>
-        <div className="flex items-center gap-4 theme-text-secondary mb-6">
+        <div className="flex items-center gap-4 mb-6" style={getTextStyle()}>
           <span>By {metadata.author}</span>
           <span>•</span>
           <span>{metadata.date}</span>
@@ -46,7 +55,7 @@ export default function ManagingStateLaravelAngular() {
       </header>
 
       <div className="prose prose-lg max-w-none">
-        <p className="text-xl theme-text-primary leading-relaxed mb-6">
+        <p className="text-xl leading-relaxed mb-6" style={getTextStyle()}>
           When building modern web applications with Laravel and Angular, one of
           the most critical aspects to get right is state management. This
           comprehensive guide will walk you through the best practices for
@@ -55,14 +64,11 @@ export default function ManagingStateLaravelAngular() {
 
         <h2
           className="text-2xl font-semibold mt-8 mb-4"
-          style={{ color: "hsl(var(--theme-text-primary))" }}
+          style={getTextStyle(true)}
         >
           Introduction
         </h2>
-        <p
-          className="leading-relaxed mb-6"
-          style={{ color: "hsl(var(--theme-text-secondary))" }}
-        >
+        <p className="leading-relaxed mb-6" style={getTextStyle()}>
           As a full-stack developer with over 4 years of experience working with
           Laravel and Angular, I've encountered numerous challenges in managing
           application state effectively. The key is to establish a clear data
@@ -72,21 +78,18 @@ export default function ManagingStateLaravelAngular() {
 
         <h2
           className="text-2xl font-semibold mt-8 mb-4"
-          style={{ color: "hsl(var(--theme-text-primary))" }}
+          style={getTextStyle(true)}
         >
           Laravel Backend: API Design Principles
         </h2>
 
         <h3
           className="text-xl font-semibold mt-6 mb-3"
-          style={{ color: "hsl(var(--theme-text-primary))" }}
+          style={getTextStyle(true)}
         >
           1. RESTful API Structure
         </h3>
-        <p
-          className="leading-relaxed mb-4"
-          style={{ color: "hsl(var(--theme-text-secondary))" }}
-        >
+        <p className="leading-relaxed mb-4" style={getTextStyle()}>
           Start by designing your Laravel API following RESTful principles. This
           creates a predictable structure that your Angular frontend can easily
           consume.
