@@ -81,19 +81,19 @@
   /* Night Theme - Dark & Cool */
   .night {
     --background: 240 15% 9%;
-    --foreground: 240 10% 95%;
+    --foreground: 0 0% 98%;
     --card: 240 15% 15%;
-    --card-foreground: 240 10% 95%;
+    --card-foreground: 0 0% 98%;
     --popover: 240 15% 15%;
-    --popover-foreground: 240 10% 95%;
+    --popover-foreground: 0 0% 98%;
     --primary: 265 89% 78%;
     --primary-foreground: 240 15% 9%;
     --secondary: 240 15% 25%;
-    --secondary-foreground: 240 10% 95%;
+    --secondary-foreground: 0 0% 98%;
     --muted: 240 15% 25%;
-    --muted-foreground: 240 10% 75%;
+    --muted-foreground: 0 0% 85%;
     --accent: 240 15% 25%;
-    --accent-foreground: 240 10% 95%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
     --border: 240 15% 30%;
@@ -106,8 +106,8 @@
     --theme-gradient-to: 265 89% 78%;
     --theme-accent: 265 89% 78%;
     --theme-accent-hover: 265 89% 72%;
-    --theme-text-primary: 240 10% 95%;
-    --theme-text-secondary: 240 10% 75%;
+    --theme-text-primary: 0 0% 98%;
+    --theme-text-secondary: 0 0% 85%;
     --theme-surface: 240 15% 15%;
     --theme-surface-hover: 240 15% 25%;
   }
