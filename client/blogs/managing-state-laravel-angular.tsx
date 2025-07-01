@@ -1,4 +1,5 @@
 import { BlogMetadata } from "@/types/blog";
+import { useTheme } from "@/hooks/use-theme";
 
 export const metadata: BlogMetadata = {
   id: "managing-state-laravel-angular",
