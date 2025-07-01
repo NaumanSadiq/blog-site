@@ -169,6 +169,7 @@
   .theme-switcher-button {
     position: relative;
     overflow: hidden;
+    color: hsl(var(--theme-text-primary));
   }
 
   .theme-switcher-button::before {
@@ -189,6 +190,19 @@
 
   .theme-switcher-button:hover::before {
     left: 100%;
+  }
+
+  /* Make sure icons are visible in all themes */
+  .morning .theme-switcher-button {
+    color: hsl(222.2 84% 4.9%);
+  }
+
+  .evening .theme-switcher-button {
+    color: hsl(25 45% 15%);
+  }
+
+  .night .theme-switcher-button {
+    color: hsl(0 0% 98%);
   }
 
   .theme-dropdown {
