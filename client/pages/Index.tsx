@@ -1,5 +1,6 @@
 import { getAllBlogMetadata } from "@/blogs";
 import { BlogCard } from "@/components/BlogCard";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Search, Code, Laptop, Coffee } from "lucide-react";
