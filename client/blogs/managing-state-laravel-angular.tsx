@@ -238,20 +238,17 @@ export class PostListComponent implements OnInit {
           improve performance.
         </p>
 
-        <h2
-          className="text-2xl font-semibold mt-8 mb-4"
-          style={getTextStyle(true)}
-        >
+        <h2 className="text-2xl font-semibold theme-text-primary mt-8 mb-4">
           Conclusion
         </h2>
-        <p className="leading-relaxed mb-6" style={getTextStyle()}>
+        <p className="theme-text-secondary leading-relaxed mb-6">
           Effective state management between Laravel and Angular requires
           careful planning and consistent patterns. By following these
           practices, you'll build maintainable, scalable applications that
           provide excellent user experiences.
         </p>
 
-        <p className="leading-relaxed" style={getTextStyle()}>
+        <p className="theme-text-secondary leading-relaxed">
           Remember, the key is to keep your state management simple and
           predictable. Start with basic patterns and gradually introduce more
           complex solutions as your application grows.
