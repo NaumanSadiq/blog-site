@@ -219,17 +219,18 @@
   }
 
   .prose {
-    color: #374151;
+    color: hsl(var(--theme-text-secondary));
     max-width: none;
   }
 
+  .prose h1,
   .prose h2 {
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 2rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    color: #111827;
+    color: hsl(var(--theme-text-primary)) !important;
   }
 
   .prose h3 {
@@ -238,26 +239,28 @@
     line-height: 1.75rem;
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
-    color: #1f2937;
+    color: hsl(var(--theme-text-primary)) !important;
   }
 
   .prose p {
     margin-bottom: 1rem;
     line-height: 1.75;
+    color: hsl(var(--theme-text-secondary)) !important;
   }
 
   .prose pre {
-    background-color: #1f2937;
-    color: #f3f4f6;
+    background-color: hsl(240 15% 8%);
+    color: hsl(0 0% 95%);
     padding: 1rem;
     border-radius: 0.5rem;
     overflow-x: auto;
     margin: 1.5rem 0;
+    border: 1px solid hsl(var(--border));
   }
 
   .prose code {
-    background-color: #f3f4f6;
-    color: #374151;
+    background-color: hsl(var(--muted));
+    color: hsl(var(--theme-text-primary));
     padding: 0.125rem 0.25rem;
     border-radius: 0.25rem;
     font-size: 0.875rem;
@@ -265,7 +268,22 @@
 
   .prose pre code {
     background-color: transparent;
-    color: inherit;
+    color: hsl(0 0% 95%);
     padding: 0;
+  }
+
+  /* Night mode specific overrides */
+  .night .prose {
+    color: hsl(0 0% 85%) !important;
+  }
+
+  .night .prose h1,
+  .night .prose h2,
+  .night .prose h3 {
+    color: hsl(0 0% 98%) !important;
+  }
+
+  .night .prose p {
+    color: hsl(0 0% 85%) !important;
   }
 }
