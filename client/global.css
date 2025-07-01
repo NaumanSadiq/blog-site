@@ -12,36 +12,36 @@
   :root,
   .morning {
     --background: 204 100% 97%;
-    --foreground: 213 31% 91%;
+    --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 210 98% 78%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 204 94% 94%;
-    --secondary-foreground: 213 31% 91%;
-    --muted: 204 94% 94%;
+    --primary: 210 98% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 204 94% 94%;
-    --accent-foreground: 213 31% 91%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
     --border: 213 27% 84%;
     --input: 213 27% 84%;
-    --ring: 210 98% 78%;
+    --ring: 210 98% 65%;
     --radius: 0.5rem;
 
     /* Custom theme variables */
     --theme-gradient-from: 204 100% 97%;
     --theme-gradient-via: 213 100% 96%;
     --theme-gradient-to: 221 83% 53%;
-    --theme-accent: 210 98% 78%;
-    --theme-accent-hover: 212 97% 72%;
+    --theme-accent: 210 98% 65%;
+    --theme-accent-hover: 212 97% 58%;
     --theme-text-primary: 222.2 84% 4.9%;
     --theme-text-secondary: 215.4 16.3% 46.9%;
     --theme-surface: 0 0% 100%;
-    --theme-surface-hover: 204 94% 94%;
+    --theme-surface-hover: 210 40% 96%;
   }
 
   /* Evening Theme - Warm & Golden */
@@ -80,36 +80,36 @@
 
   /* Night Theme - Dark & Cool */
   .night {
-    --background: 240 15% 9%;
-    --foreground: 240 20% 85%;
-    --card: 240 15% 12%;
-    --card-foreground: 240 20% 85%;
-    --popover: 240 15% 12%;
-    --popover-foreground: 240 20% 85%;
+    --background: 240 15% 4%;
+    --foreground: 0 0% 100%;
+    --card: 240 15% 8%;
+    --card-foreground: 0 0% 100%;
+    --popover: 240 15% 8%;
+    --popover-foreground: 0 0% 100%;
     --primary: 265 89% 78%;
-    --primary-foreground: 240 15% 9%;
-    --secondary: 240 15% 18%;
-    --secondary-foreground: 240 20% 85%;
-    --muted: 240 15% 18%;
-    --muted-foreground: 240 10% 65%;
-    --accent: 240 15% 18%;
-    --accent-foreground: 240 20% 85%;
+    --primary-foreground: 240 15% 4%;
+    --secondary: 240 15% 15%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 15% 15%;
+    --muted-foreground: 0 0% 90%;
+    --accent: 240 15% 15%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 240 15% 22%;
-    --input: 240 15% 22%;
+    --border: 240 15% 20%;
+    --input: 240 15% 15%;
     --ring: 265 89% 78%;
 
     /* Custom theme variables */
-    --theme-gradient-from: 240 15% 9%;
-    --theme-gradient-via: 240 15% 12%;
+    --theme-gradient-from: 240 15% 4%;
+    --theme-gradient-via: 240 15% 6%;
     --theme-gradient-to: 265 89% 78%;
     --theme-accent: 265 89% 78%;
     --theme-accent-hover: 265 89% 72%;
-    --theme-text-primary: 240 20% 85%;
-    --theme-text-secondary: 240 10% 65%;
-    --theme-surface: 240 15% 12%;
-    --theme-surface-hover: 240 15% 18%;
+    --theme-text-primary: 0 0% 100%;
+    --theme-text-secondary: 0 0% 90%;
+    --theme-surface: 240 15% 8%;
+    --theme-surface-hover: 240 15% 15%;
   }
 }
 
@@ -169,6 +169,7 @@
   .theme-switcher-button {
     position: relative;
     overflow: hidden;
+    color: hsl(var(--theme-text-primary));
   }
 
   .theme-switcher-button::before {
@@ -189,6 +190,19 @@
 
   .theme-switcher-button:hover::before {
     left: 100%;
+  }
+
+  /* Make sure icons are visible in all themes */
+  .morning .theme-switcher-button {
+    color: hsl(222.2 84% 4.9%);
+  }
+
+  .evening .theme-switcher-button {
+    color: hsl(25 45% 15%);
+  }
+
+  .night .theme-switcher-button {
+    color: hsl(0 0% 98%);
   }
 
   .theme-dropdown {
@@ -219,17 +233,18 @@
   }
 
   .prose {
-    color: #374151;
+    color: hsl(var(--theme-text-secondary));
     max-width: none;
   }
 
+  .prose h1,
   .prose h2 {
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 2rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    color: #111827;
+    color: hsl(var(--theme-text-primary)) !important;
   }
 
   .prose h3 {
@@ -238,26 +253,28 @@
     line-height: 1.75rem;
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
-    color: #1f2937;
+    color: hsl(var(--theme-text-primary)) !important;
   }
 
   .prose p {
     margin-bottom: 1rem;
     line-height: 1.75;
+    color: hsl(var(--theme-text-secondary)) !important;
   }
 
   .prose pre {
-    background-color: #1f2937;
-    color: #f3f4f6;
+    background-color: hsl(240 15% 8%);
+    color: hsl(0 0% 95%);
     padding: 1rem;
     border-radius: 0.5rem;
     overflow-x: auto;
     margin: 1.5rem 0;
+    border: 1px solid hsl(var(--border));
   }
 
   .prose code {
-    background-color: #f3f4f6;
-    color: #374151;
+    background-color: hsl(var(--muted));
+    color: hsl(var(--theme-text-primary));
     padding: 0.125rem 0.25rem;
     border-radius: 0.25rem;
     font-size: 0.875rem;
@@ -265,7 +282,23 @@
 
   .prose pre code {
     background-color: transparent;
-    color: inherit;
+    color: hsl(0 0% 95%);
     padding: 0;
+  }
+
+  /* Night mode specific overrides - simple white text */
+  .night .theme-text-primary,
+  .night h1,
+  .night h2,
+  .night h3,
+  .night h4,
+  .night h5,
+  .night h6 {
+    color: white !important;
+  }
+
+  .night .theme-text-secondary,
+  .night p {
+    color: white !important;
   }
 }

@@ -91,10 +91,10 @@ Route::apiResource('users', UserController::class);
           </pre>
         </div>
 
-        <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
+        <h3 className="text-xl font-semibold theme-text-primary mt-6 mb-3">
           2. API Resources for Consistent Data Format
         </h3>
-        <p className="text-gray-700 leading-relaxed mb-4">
+        <p className="theme-text-secondary leading-relaxed mb-4">
           Use Laravel's API Resources to ensure consistent data formatting
           across your application.
         </p>
@@ -125,14 +125,14 @@ class PostResource extends JsonResource
           </pre>
         </div>
 
-        <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+        <h2 className="text-2xl font-semibold theme-text-primary mt-8 mb-4">
           Angular Frontend: State Management Strategies
         </h2>
 
-        <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
+        <h3 className="text-xl font-semibold theme-text-primary mt-6 mb-3">
           1. Services for Data Management
         </h3>
-        <p className="text-gray-700 leading-relaxed mb-4">
+        <p className="theme-text-secondary leading-relaxed mb-4">
           Create Angular services that act as the single source of truth for
           your application data.
         </p>
@@ -172,10 +172,10 @@ export class PostService {
           </pre>
         </div>
 
-        <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
+        <h3 className="text-xl font-semibold theme-text-primary mt-6 mb-3">
           2. Reactive Programming with RxJS
         </h3>
-        <p className="text-gray-700 leading-relaxed mb-4">
+        <p className="theme-text-secondary leading-relaxed mb-4">
           Leverage RxJS for reactive state management that automatically updates
           your UI when data changes.
         </p>
@@ -210,45 +210,45 @@ export class PostListComponent implements OnInit {
           </pre>
         </div>
 
-        <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+        <h2 className="text-2xl font-semibold theme-text-primary mt-8 mb-4">
           Best Practices for State Synchronization
         </h2>
 
-        <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
+        <h3 className="text-xl font-semibold theme-text-primary mt-6 mb-3">
           1. Optimistic Updates
         </h3>
-        <p className="text-gray-700 leading-relaxed mb-4">
+        <p className="theme-text-secondary leading-relaxed mb-4">
           Implement optimistic updates to improve user experience by updating
           the UI immediately while the API call is in progress.
         </p>
 
-        <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
+        <h3 className="text-xl font-semibold theme-text-primary mt-6 mb-3">
           2. Error Handling
         </h3>
-        <p className="text-gray-700 leading-relaxed mb-4">
+        <p className="theme-text-secondary leading-relaxed mb-4">
           Always implement proper error handling to revert optimistic updates
           when API calls fail.
         </p>
 
-        <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
+        <h3 className="text-xl font-semibold theme-text-primary mt-6 mb-3">
           3. Caching Strategy
         </h3>
-        <p className="text-gray-700 leading-relaxed mb-4">
+        <p className="theme-text-secondary leading-relaxed mb-4">
           Implement intelligent caching to reduce unnecessary API calls and
           improve performance.
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+        <h2 className="text-2xl font-semibold theme-text-primary mt-8 mb-4">
           Conclusion
         </h2>
-        <p className="text-gray-700 leading-relaxed mb-6">
+        <p className="theme-text-secondary leading-relaxed mb-6">
           Effective state management between Laravel and Angular requires
           careful planning and consistent patterns. By following these
           practices, you'll build maintainable, scalable applications that
           provide excellent user experiences.
         </p>
 
-        <p className="text-gray-700 leading-relaxed">
+        <p className="theme-text-secondary leading-relaxed">
           Remember, the key is to keep your state management simple and
           predictable. Start with basic patterns and gradually introduce more
           complex solutions as your application grows.
