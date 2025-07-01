@@ -15,12 +15,12 @@ export const metadata: BlogMetadata = {
 
 export default function ManagingStateLaravelAngular() {
   return (
-    <article className="max-w-4xl mx-auto px-6 py-8">
+    <article className="max-w-4xl mx-auto px-6 py-8 theme-surface rounded-xl shadow-lg">
       <header className="mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+        <h1 className="text-4xl font-bold theme-text-primary mb-4">
           {metadata.title}
         </h1>
-        <div className="flex items-center gap-4 text-gray-600 mb-6">
+        <div className="flex items-center gap-4 theme-text-secondary mb-6">
           <span>By {metadata.author}</span>
           <span>•</span>
           <span>{metadata.date}</span>
@@ -31,7 +31,7 @@ export default function ManagingStateLaravelAngular() {
           {metadata.tags.map((tag) => (
             <span
               key={tag}
-              className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
+              className="px-3 py-1 theme-accent-bg/20 theme-accent rounded-full text-sm"
             >
               {tag}
             </span>
