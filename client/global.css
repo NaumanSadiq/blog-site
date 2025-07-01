@@ -286,44 +286,19 @@
     padding: 0;
   }
 
-  /* Night mode specific overrides */
-  .night .prose {
-    color: hsl(0 0% 95%) !important;
+  /* Night mode specific overrides - simple white text */
+  .night .theme-text-primary,
+  .night h1,
+  .night h2,
+  .night h3,
+  .night h4,
+  .night h5,
+  .night h6 {
+    color: white !important;
   }
 
-  .night .prose h1,
-  .night .prose h2,
-  .night .prose h3 {
-    color: hsl(0 0% 100%) !important;
-  }
-
-  .night .prose p {
-    color: hsl(0 0% 95%) !important;
-  }
-
-  /* Additional Night mode overrides for better contrast */
-  .night * {
-    color: inherit;
-  }
-
-  .night .theme-text-primary {
-    color: hsl(0 0% 100%) !important;
-  }
-
-  .night .theme-text-secondary {
-    color: hsl(0 0% 95%) !important;
-  }
-
-  .night article p {
-    color: hsl(0 0% 95%) !important;
-  }
-
-  .night article h1,
-  .night article h2,
-  .night article h3,
-  .night article h4,
-  .night article h5,
-  .night article h6 {
-    color: hsl(0 0% 100%) !important;
+  .night .theme-text-secondary,
+  .night p {
+    color: white !important;
   }
 }
