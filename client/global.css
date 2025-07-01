@@ -80,36 +80,36 @@
 
   /* Night Theme - Dark & Cool */
   .night {
-    --background: 240 15% 9%;
-    --foreground: 0 0% 98%;
-    --card: 240 15% 15%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 15% 15%;
-    --popover-foreground: 0 0% 98%;
+    --background: 240 15% 4%;
+    --foreground: 0 0% 100%;
+    --card: 240 15% 8%;
+    --card-foreground: 0 0% 100%;
+    --popover: 240 15% 8%;
+    --popover-foreground: 0 0% 100%;
     --primary: 265 89% 78%;
-    --primary-foreground: 240 15% 9%;
-    --secondary: 240 15% 25%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 15% 25%;
-    --muted-foreground: 0 0% 85%;
-    --accent: 240 15% 25%;
-    --accent-foreground: 0 0% 98%;
+    --primary-foreground: 240 15% 4%;
+    --secondary: 240 15% 15%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 15% 15%;
+    --muted-foreground: 0 0% 90%;
+    --accent: 240 15% 15%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 240 15% 30%;
-    --input: 240 15% 25%;
+    --border: 240 15% 20%;
+    --input: 240 15% 15%;
     --ring: 265 89% 78%;
 
     /* Custom theme variables */
-    --theme-gradient-from: 240 15% 9%;
-    --theme-gradient-via: 240 15% 12%;
+    --theme-gradient-from: 240 15% 4%;
+    --theme-gradient-via: 240 15% 6%;
     --theme-gradient-to: 265 89% 78%;
     --theme-accent: 265 89% 78%;
     --theme-accent-hover: 265 89% 72%;
-    --theme-text-primary: 0 0% 98%;
-    --theme-text-secondary: 0 0% 85%;
-    --theme-surface: 240 15% 15%;
-    --theme-surface-hover: 240 15% 25%;
+    --theme-text-primary: 0 0% 100%;
+    --theme-text-secondary: 0 0% 90%;
+    --theme-surface: 240 15% 8%;
+    --theme-surface-hover: 240 15% 15%;
   }
 }
 
