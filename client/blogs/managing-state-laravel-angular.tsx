@@ -210,42 +210,30 @@ export class PostListComponent implements OnInit {
           </pre>
         </div>
 
-        <h2
-          className="text-2xl font-semibold mt-8 mb-4"
-          style={getTextStyle(true)}
-        >
+        <h2 className="text-2xl font-semibold theme-text-primary mt-8 mb-4">
           Best Practices for State Synchronization
         </h2>
 
-        <h3
-          className="text-xl font-semibold mt-6 mb-3"
-          style={getTextStyle(true)}
-        >
+        <h3 className="text-xl font-semibold theme-text-primary mt-6 mb-3">
           1. Optimistic Updates
         </h3>
-        <p className="leading-relaxed mb-4" style={getTextStyle()}>
+        <p className="theme-text-secondary leading-relaxed mb-4">
           Implement optimistic updates to improve user experience by updating
           the UI immediately while the API call is in progress.
         </p>
 
-        <h3
-          className="text-xl font-semibold mt-6 mb-3"
-          style={getTextStyle(true)}
-        >
+        <h3 className="text-xl font-semibold theme-text-primary mt-6 mb-3">
           2. Error Handling
         </h3>
-        <p className="leading-relaxed mb-4" style={getTextStyle()}>
+        <p className="theme-text-secondary leading-relaxed mb-4">
           Always implement proper error handling to revert optimistic updates
           when API calls fail.
         </p>
 
-        <h3
-          className="text-xl font-semibold mt-6 mb-3"
-          style={getTextStyle(true)}
-        >
+        <h3 className="text-xl font-semibold theme-text-primary mt-6 mb-3">
           3. Caching Strategy
         </h3>
-        <p className="leading-relaxed mb-4" style={getTextStyle()}>
+        <p className="theme-text-secondary leading-relaxed mb-4">
           Implement intelligent caching to reduce unnecessary API calls and
           improve performance.
         </p>
