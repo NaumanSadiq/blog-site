@@ -1,62 +1,156 @@
-import { DemoResponse } from "@shared/api";
-import { useEffect, useState } from "react";
+import { getAllBlogMetadata } from "@/blogs";
+import { BlogCard } from "@/components/BlogCard";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Search, Code, Laptop, Coffee } from "lucide-react";
+import { useState, useMemo } from "react";
 
 export default function Index() {
-  const [exampleFromServer, setExampleFromServer] = useState("");
-  // Fetch users on component mount
-  useEffect(() => {
-    fetchDemo();
-  }, []);
+  const [searchTerm, setSearchTerm] = useState("");
+  const blogs = getAllBlogMetadata();
 
-  // Example of how to fetch data from the server (if needed)
-  const fetchDemo = async () => {
-    try {
-      const response = await fetch("/api/demo");
-      const data = (await response.json()) as DemoResponse;
-      setExampleFromServer(data.message);
-    } catch (error) {
-      console.error("Error fetching hello:", error);
-    }
-  };
+  const filteredBlogs = useMemo(() => {
+    if (!searchTerm) return blogs;
+    return blogs.filter(
+      (blog) =>
+        blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        blog.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        blog.tags.some((tag) =>
+          tag.toLowerCase().includes(searchTerm.toLowerCase()),
+        ),
+    );
+  }, [blogs, searchTerm]);
+
+  const featuredBlog = blogs[0]; // First blog as featured
+  const otherBlogs = blogs.slice(1);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
-      <div className="text-center">
-        {/* TODO: FUSION_GENERATION_APP_PLACEHOLDER replace everything here with the actual app! */}
-        <h1 className="text-2xl font-semibold text-slate-800 flex items-center justify-center gap-3">
-          <svg
-            className="animate-spin h-8 w-8 text-slate-400"
-            viewBox="0 0 50 50"
-          >
-            <circle
-              className="opacity-30"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      {/* Header */}
+      <header className="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-2 rounded-lg">
+                <Code className="w-6 h-6" />
+              </div>
+              <div>
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  DevBlog
+                </h1>
+                <p className="text-sm text-gray-600">
+                  Full Stack Development Insights
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-gray-600">
+              <Laptop className="w-4 h-4" />
+              <span>By Nauman Sadiq</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <Coffee className="w-6 h-6 text-amber-600" />
+            <Badge variant="secondary" className="text-sm">
+              4+ Years Experience
+            </Badge>
+          </div>
+          <h2 className="text-5xl font-bold text-gray-900 mb-6">
+            Welcome to My{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Developer Journey
+            </span>
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Sharing insights, tutorials, and experiences from full-stack
+            development with Laravel, Angular, JavaScript, and modern web
+            technologies.
+          </p>
+
+          {/* Search */}
+          <div className="max-w-md mx-auto relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <Input
+              type="text"
+              placeholder="Search articles..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="pl-10 h-12 text-lg"
             />
-            <circle
-              className="text-slate-600"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
-              strokeDasharray="100"
-              strokeDashoffset="75"
-            />
-          </svg>
-          Generating your app...
-        </h1>
-        <p className="mt-4 text-slate-600 max-w-md">
-          Watch the chat on the left for updates that might need your attention
-          to finish generating
-        </p>
-        <p className="mt-4 hidden max-w-md">{exampleFromServer}</p>
-      </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Blog */}
+      {featuredBlog && !searchTerm && (
+        <section className="px-4 sm:px-6 lg:px-8 mb-16">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex items-center gap-2 mb-6">
+              <div className="w-8 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded"></div>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Featured Article
+              </h3>
+            </div>
+            <div className="max-w-3xl">
+              <BlogCard blog={featuredBlog} />
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* All Blogs */}
+      <section className="px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center gap-2 mb-8">
+            <div className="w-8 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded"></div>
+            <h3 className="text-2xl font-bold text-gray-900">
+              {searchTerm ? "Search Results" : "Latest Articles"}
+            </h3>
+            <span className="text-gray-500">({filteredBlogs.length})</span>
+          </div>
+
+          {filteredBlogs.length === 0 ? (
+            <div className="text-center py-16">
+              <Search className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+              <h4 className="text-xl font-semibold text-gray-700 mb-2">
+                No articles found
+              </h4>
+              <p className="text-gray-500">
+                Try adjusting your search terms or browse all articles.
+              </p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {(searchTerm ? filteredBlogs : otherBlogs).map((blog) => (
+                <BlogCard key={blog.id} blog={blog} />
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-2 rounded-lg">
+              <Code className="w-6 h-6" />
+            </div>
+            <h4 className="text-xl font-bold">DevBlog</h4>
+          </div>
+          <p className="text-gray-400 mb-4">
+            Full Stack Developer sharing knowledge and experiences
+          </p>
+          <div className="flex items-center justify-center gap-6 text-sm text-gray-400">
+            <span>Laravel • Angular • JavaScript • TypeScript</span>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
