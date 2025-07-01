@@ -24,7 +24,7 @@ export function BlogCard({ blog }: BlogCardProps) {
           <div className="flex items-center gap-2 mb-3">
             <Badge
               variant="secondary"
-              className="text-xs theme-surface-hover theme-text-primary"
+              className="text-xs bg-blue-100 text-blue-800 border border-blue-200"
             >
               {blog.category}
             </Badge>
