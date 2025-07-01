@@ -125,20 +125,14 @@ class PostResource extends JsonResource
           </pre>
         </div>
 
-        <h2
-          className="text-2xl font-semibold mt-8 mb-4"
-          style={getTextStyle(true)}
-        >
+        <h2 className="text-2xl font-semibold theme-text-primary mt-8 mb-4">
           Angular Frontend: State Management Strategies
         </h2>
 
-        <h3
-          className="text-xl font-semibold mt-6 mb-3"
-          style={getTextStyle(true)}
-        >
+        <h3 className="text-xl font-semibold theme-text-primary mt-6 mb-3">
           1. Services for Data Management
         </h3>
-        <p className="leading-relaxed mb-4" style={getTextStyle()}>
+        <p className="theme-text-secondary leading-relaxed mb-4">
           Create Angular services that act as the single source of truth for
           your application data.
         </p>
