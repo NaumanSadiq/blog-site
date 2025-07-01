@@ -110,10 +110,13 @@ Route::apiResource('users', UserController::class);
           </pre>
         </div>
 
-        <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
+        <h3
+          className="text-xl font-semibold mt-6 mb-3"
+          style={getTextStyle(true)}
+        >
           2. API Resources for Consistent Data Format
         </h3>
-        <p className="text-gray-700 leading-relaxed mb-4">
+        <p className="leading-relaxed mb-4" style={getTextStyle()}>
           Use Laravel's API Resources to ensure consistent data formatting
           across your application.
         </p>
@@ -144,14 +147,20 @@ class PostResource extends JsonResource
           </pre>
         </div>
 
-        <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+        <h2
+          className="text-2xl font-semibold mt-8 mb-4"
+          style={getTextStyle(true)}
+        >
           Angular Frontend: State Management Strategies
         </h2>
 
-        <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
+        <h3
+          className="text-xl font-semibold mt-6 mb-3"
+          style={getTextStyle(true)}
+        >
           1. Services for Data Management
         </h3>
-        <p className="text-gray-700 leading-relaxed mb-4">
+        <p className="leading-relaxed mb-4" style={getTextStyle()}>
           Create Angular services that act as the single source of truth for
           your application data.
         </p>
@@ -191,10 +200,13 @@ export class PostService {
           </pre>
         </div>
 
-        <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
+        <h3
+          className="text-xl font-semibold mt-6 mb-3"
+          style={getTextStyle(true)}
+        >
           2. Reactive Programming with RxJS
         </h3>
-        <p className="text-gray-700 leading-relaxed mb-4">
+        <p className="leading-relaxed mb-4" style={getTextStyle()}>
           Leverage RxJS for reactive state management that automatically updates
           your UI when data changes.
         </p>
@@ -229,45 +241,60 @@ export class PostListComponent implements OnInit {
           </pre>
         </div>
 
-        <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+        <h2
+          className="text-2xl font-semibold mt-8 mb-4"
+          style={getTextStyle(true)}
+        >
           Best Practices for State Synchronization
         </h2>
 
-        <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
+        <h3
+          className="text-xl font-semibold mt-6 mb-3"
+          style={getTextStyle(true)}
+        >
           1. Optimistic Updates
         </h3>
-        <p className="text-gray-700 leading-relaxed mb-4">
+        <p className="leading-relaxed mb-4" style={getTextStyle()}>
           Implement optimistic updates to improve user experience by updating
           the UI immediately while the API call is in progress.
         </p>
 
-        <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
+        <h3
+          className="text-xl font-semibold mt-6 mb-3"
+          style={getTextStyle(true)}
+        >
           2. Error Handling
         </h3>
-        <p className="text-gray-700 leading-relaxed mb-4">
+        <p className="leading-relaxed mb-4" style={getTextStyle()}>
           Always implement proper error handling to revert optimistic updates
           when API calls fail.
         </p>
 
-        <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
+        <h3
+          className="text-xl font-semibold mt-6 mb-3"
+          style={getTextStyle(true)}
+        >
           3. Caching Strategy
         </h3>
-        <p className="text-gray-700 leading-relaxed mb-4">
+        <p className="leading-relaxed mb-4" style={getTextStyle()}>
           Implement intelligent caching to reduce unnecessary API calls and
           improve performance.
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+        <h2
+          className="text-2xl font-semibold mt-8 mb-4"
+          style={getTextStyle(true)}
+        >
           Conclusion
         </h2>
-        <p className="text-gray-700 leading-relaxed mb-6">
+        <p className="leading-relaxed mb-6" style={getTextStyle()}>
           Effective state management between Laravel and Angular requires
           careful planning and consistent patterns. By following these
           practices, you'll build maintainable, scalable applications that
           provide excellent user experiences.
         </p>
 
-        <p className="text-gray-700 leading-relaxed">
+        <p className="leading-relaxed" style={getTextStyle()}>
           Remember, the key is to keep your state management simple and
           predictable. Start with basic patterns and gradually introduce more
           complex solutions as your application grows.
