@@ -45,17 +45,17 @@ export default function ManagingStateLaravelAngular() {
       </header>
 
       <div className="prose prose-lg max-w-none">
-        <p className="text-xl text-gray-700 leading-relaxed mb-6">
+        <p className="text-xl theme-text-primary leading-relaxed mb-6">
           When building modern web applications with Laravel and Angular, one of
           the most critical aspects to get right is state management. This
           comprehensive guide will walk you through the best practices for
           managing state between your Laravel backend and Angular frontend.
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+        <h2 className="text-2xl font-semibold theme-text-primary mt-8 mb-4">
           Introduction
         </h2>
-        <p className="text-gray-700 leading-relaxed mb-6">
+        <p className="theme-text-secondary leading-relaxed mb-6">
           As a full-stack developer with over 4 years of experience working with
           Laravel and Angular, I've encountered numerous challenges in managing
           application state effectively. The key is to establish a clear data
@@ -63,14 +63,14 @@ export default function ManagingStateLaravelAngular() {
           state.
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+        <h2 className="text-2xl font-semibold theme-text-primary mt-8 mb-4">
           Laravel Backend: API Design Principles
         </h2>
 
-        <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
+        <h3 className="text-xl font-semibold theme-text-primary mt-6 mb-3">
           1. RESTful API Structure
         </h3>
-        <p className="text-gray-700 leading-relaxed mb-4">
+        <p className="theme-text-secondary leading-relaxed mb-4">
           Start by designing your Laravel API following RESTful principles. This
           creates a predictable structure that your Angular frontend can easily
           consume.
