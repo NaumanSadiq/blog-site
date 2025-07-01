@@ -140,18 +140,18 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="theme-surface border-t py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-2 rounded-lg">
+            <div className="theme-accent-bg text-white p-2 rounded-lg transition-all duration-300 hover:scale-105">
               <Code className="w-6 h-6" />
             </div>
-            <h4 className="text-xl font-bold">DevBlog</h4>
+            <h4 className="text-xl font-bold theme-text-primary">DevBlog</h4>
           </div>
-          <p className="text-gray-400 mb-4">
+          <p className="theme-text-secondary mb-4">
             Full Stack Developer sharing knowledge and experiences
           </p>
-          <div className="flex items-center justify-center gap-6 text-sm text-gray-400">
+          <div className="flex items-center justify-center gap-6 text-sm theme-text-secondary">
             <span>Laravel • Angular • JavaScript • TypeScript</span>
           </div>
         </div>
