@@ -10,6 +10,21 @@ interface BlogCardProps {
 }
 
 export function BlogCard({ blog }: BlogCardProps) {
+  const { theme } = useTheme();
+
+  const getBadgeStyle = () => {
+    switch (theme) {
+      case "morning":
+        return "bg-blue-600 text-white border-blue-700";
+      case "evening":
+        return "bg-orange-600 text-white border-orange-700";
+      case "night":
+        return "bg-purple-600 text-white border-purple-700";
+      default:
+        return "bg-blue-600 text-white border-blue-700";
+    }
+  };
+
   return (
     <Link to={`/blog/${blog.id}`} className="group">
       <Card className="overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 h-full theme-surface border">
@@ -25,7 +40,7 @@ export function BlogCard({ blog }: BlogCardProps) {
           <div className="flex items-center gap-2 mb-3">
             <Badge
               variant="secondary"
-              className="text-xs bg-blue-100 text-blue-800 border border-blue-200"
+              className={`text-xs font-medium ${getBadgeStyle()}`}
             >
               {blog.category}
             </Badge>
