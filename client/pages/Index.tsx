@@ -57,18 +57,19 @@ export default function Index() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-6">
-            <Coffee className="w-6 h-6 text-amber-600" />
-            <Badge variant="secondary" className="text-sm">
+            <Coffee className="w-6 h-6 theme-accent" />
+            <Badge
+              variant="secondary"
+              className="text-sm theme-surface theme-text-primary"
+            >
               4+ Years Experience
             </Badge>
           </div>
-          <h2 className="text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-5xl font-bold theme-text-primary mb-6">
             Welcome to My{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Developer Journey
-            </span>
+            <span className="theme-accent">Developer Journey</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          <p className="text-xl theme-text-secondary max-w-3xl mx-auto mb-8">
             Sharing insights, tutorials, and experiences from full-stack
             development with Laravel, Angular, JavaScript, and modern web
             technologies.
@@ -76,13 +77,13 @@ export default function Index() {
 
           {/* Search */}
           <div className="max-w-md mx-auto relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 theme-text-secondary w-5 h-5" />
             <Input
               type="text"
               placeholder="Search articles..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 h-12 text-lg"
+              className="pl-10 h-12 text-lg theme-surface border-border theme-text-primary focus:ring-2 focus:ring-offset-2 transition-all duration-300"
             />
           </div>
         </div>
