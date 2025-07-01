@@ -116,10 +116,90 @@
 @layer base {
   * {
     @apply border-border;
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease,
+      border-color 0.3s ease;
   }
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Theme-specific styles */
+  .theme-gradient-bg {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--theme-gradient-from)),
+      hsl(var(--theme-gradient-via)),
+      hsl(var(--theme-gradient-to))
+    );
+  }
+
+  .theme-surface {
+    background-color: hsl(var(--theme-surface));
+    color: hsl(var(--theme-text-primary));
+  }
+
+  .theme-surface-hover:hover {
+    background-color: hsl(var(--theme-surface-hover));
+  }
+
+  .theme-accent {
+    color: hsl(var(--theme-accent));
+  }
+
+  .theme-accent-bg {
+    background-color: hsl(var(--theme-accent));
+  }
+
+  .theme-accent-bg:hover {
+    background-color: hsl(var(--theme-accent-hover));
+  }
+
+  .theme-text-primary {
+    color: hsl(var(--theme-text-primary));
+  }
+
+  .theme-text-secondary {
+    color: hsl(var(--theme-text-secondary));
+  }
+
+  /* Theme switcher specific styles */
+  .theme-switcher-button {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .theme-switcher-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--theme-accent) / 0.3),
+      transparent
+    );
+    transition: left 0.5s ease;
+  }
+
+  .theme-switcher-button:hover::before {
+    left: 100%;
+  }
+
+  .theme-dropdown {
+    backdrop-filter: blur(10px);
+    background-color: hsl(var(--theme-surface) / 0.9);
+    border: 1px solid hsl(var(--border));
+  }
+
+  .theme-active {
+    background-color: hsl(var(--theme-accent) / 0.1);
+    color: hsl(var(--theme-accent));
   }
 }
 
