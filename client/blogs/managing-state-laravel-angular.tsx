@@ -1,5 +1,4 @@
 import { BlogMetadata } from "@/types/blog";
-import { useTheme } from "@/hooks/use-theme";
 
 export const metadata: BlogMetadata = {
   id: "managing-state-laravel-angular",
@@ -15,22 +14,13 @@ export const metadata: BlogMetadata = {
 };
 
 export default function ManagingStateLaravelAngular() {
-  const { theme } = useTheme();
-
-  const getTextStyle = (isHeading = false) => {
-    if (theme === "night") {
-      return { color: isHeading ? "#ffffff" : "#e5e5e5" };
-    }
-    return {};
-  };
-
   return (
     <article className="max-w-4xl mx-auto px-6 py-8 theme-surface rounded-xl shadow-lg">
       <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-4" style={getTextStyle(true)}>
+        <h1 className="text-4xl font-bold theme-text-primary mb-4">
           {metadata.title}
         </h1>
-        <div className="flex items-center gap-4 mb-6" style={getTextStyle()}>
+        <div className="flex items-center gap-4 theme-text-secondary mb-6">
           <span>By {metadata.author}</span>
           <span>•</span>
           <span>{metadata.date}</span>
