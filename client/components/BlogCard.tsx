@@ -21,14 +21,14 @@ export function BlogCard({ blog }: BlogCardProps) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
         <div className="p-6">
-          <div className="flex items-center gap-2 mb-3">
-            <Badge
-              variant="secondary"
-              className="text-xs text-white bg-blue-600"
-            >
-              {blog.category}
-            </Badge>
-          </div>
+          {/*<div className="flex items-center gap-2 mb-3">*/}
+          {/*  <Badge*/}
+          {/*    variant="secondary"*/}
+          {/*    className="text-xs text-white bg-blue-600"*/}
+          {/*  >*/}
+          {/*    {blog.category}*/}
+          {/*  </Badge>*/}
+          {/*</div>*/}
           <h3 className="text-xl font-bold theme-text-primary mb-3 group-hover:text-[hsl(var(--theme-accent))] transition-colors line-clamp-2">
             {blog.title}
           </h3>
