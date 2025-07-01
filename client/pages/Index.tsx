@@ -94,8 +94,8 @@ export default function Index() {
         <section className="px-4 sm:px-6 lg:px-8 mb-16">
           <div className="max-w-7xl mx-auto">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded"></div>
-              <h3 className="text-2xl font-bold text-gray-900">
+              <div className="w-8 h-1 theme-accent-bg rounded"></div>
+              <h3 className="text-2xl font-bold theme-text-primary">
                 Featured Article
               </h3>
             </div>
@@ -110,20 +110,22 @@ export default function Index() {
       <section className="px-4 sm:px-6 lg:px-8 pb-16">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-2 mb-8">
-            <div className="w-8 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded"></div>
-            <h3 className="text-2xl font-bold text-gray-900">
+            <div className="w-8 h-1 theme-accent-bg rounded"></div>
+            <h3 className="text-2xl font-bold theme-text-primary">
               {searchTerm ? "Search Results" : "Latest Articles"}
             </h3>
-            <span className="text-gray-500">({filteredBlogs.length})</span>
+            <span className="theme-text-secondary">
+              ({filteredBlogs.length})
+            </span>
           </div>
 
           {filteredBlogs.length === 0 ? (
             <div className="text-center py-16">
-              <Search className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-              <h4 className="text-xl font-semibold text-gray-700 mb-2">
+              <Search className="w-16 h-16 theme-text-secondary opacity-50 mx-auto mb-4" />
+              <h4 className="text-xl font-semibold theme-text-primary mb-2">
                 No articles found
               </h4>
-              <p className="text-gray-500">
+              <p className="theme-text-secondary">
                 Try adjusting your search terms or browse all articles.
               </p>
             </div>
