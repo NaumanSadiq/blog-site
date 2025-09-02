@@ -115,7 +115,7 @@ export default function Index() {
               {searchTerm ? "Search Results" : "Latest Articles"}
             </h3>
             <span className="theme-text-secondary">
-              ({filteredBlogs.length})
+              ({searchTerm ? filteredBlogs.length : otherBlogs.length})
             </span>
           </div>
 
