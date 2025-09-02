@@ -4,12 +4,19 @@ import { BlogPost } from "@/types/blog";
 import ManagingStateLaravelAngular, {
   metadata as managingStateLaravelAngularMeta,
 } from "./managing-state-laravel-angular";
+import StripeAngularLaravelPayments, {
+  metadata as stripeAngularLaravelPaymentsMeta,
+} from "./stripe-angular-laravel";
 
 // Register all blogs here - add new blogs to this array
 export const allBlogs: BlogPost[] = [
   {
     metadata: managingStateLaravelAngularMeta,
     component: ManagingStateLaravelAngular,
+  },
+  {
+    metadata: stripeAngularLaravelPaymentsMeta,
+    component: StripeAngularLaravelPayments,
   },
   // Add more blogs here as you create them
 ];
