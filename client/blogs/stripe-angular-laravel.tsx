@@ -199,11 +199,9 @@ export class PaymentService {
   createIntent(amountCents: number, currency = 'usd') {
     return this.http
       .post<{ clientSecret: string }>(
-        \`
-        ${'${environment.apiBaseUrl}'}
-        /payments/create-intent\
-n      .replace(/\n/g, '')
-      , { amount: amountCents, currency })
+        environment.apiBaseUrl + '/payments/create-intent',
+        { amount: amountCents, currency }
+      )
       .pipe(map(res => res.clientSecret));
   }
 }
