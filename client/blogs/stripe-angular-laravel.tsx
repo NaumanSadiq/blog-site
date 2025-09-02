@@ -46,10 +46,10 @@ export default function StripeAngularLaravelPayments() {
 
       <div className="prose prose-lg max-w-none">
         <p className="text-xl theme-text-primary leading-relaxed mb-6">
-          This guide shows a clean, production-ready flow to accept card payments
-          with Stripe using Angular on the frontend and Laravel on the backend.
-          We will use Payment Intents, Stripe Elements, secure server-side
-          confirmations, and webhooks for reliability.
+          This guide shows a clean, production-ready flow to accept card
+          payments with Stripe using Angular on the frontend and Laravel on the
+          backend. We will use Payment Intents, Stripe Elements, secure
+          server-side confirmations, and webhooks for reliability.
         </p>
 
         <h2 className="text-2xl font-semibold theme-text-primary mt-8 mb-4">
@@ -59,7 +59,10 @@ export default function StripeAngularLaravelPayments() {
           <li>Stripe account (test mode is fine)</li>
           <li>Angular (latest) project with routing and HttpClient</li>
           <li>Laravel (latest) API project</li>
-          <li>Two keys from Stripe: Publishable key (frontend) and Secret key (backend)</li>
+          <li>
+            Two keys from Stripe: Publishable key (frontend) and Secret key
+            (backend)
+          </li>
         </ul>
 
         <h2 className="text-2xl font-semibold theme-text-primary mt-8 mb-4">
@@ -292,8 +295,8 @@ export class CheckoutComponent implements OnInit, OnDestroy {
         </h2>
         <p className="theme-text-secondary leading-relaxed mb-4">
           After confirmPayment, Stripe redirects to return_url. You can read the
-          status from the URL or load the PaymentIntent again on the server.
-          For reliability, use webhooks: they tell your server when a payment
+          status from the URL or load the PaymentIntent again on the server. For
+          reliability, use webhooks: they tell your server when a payment
           actually succeeds or fails.
         </p>
         <div className="bg-gray-900 rounded-lg p-4 mb-6 overflow-x-auto">
@@ -311,7 +314,9 @@ export class CheckoutComponent implements OnInit, OnDestroy {
           <li>Use Payment Intents + Stripe Elements for PCI compliance.</li>
           <li>Verify webhooks and update your database atomically.</li>
           <li>Use test cards like 4242 4242 4242 4242 in test mode.</li>
-          <li>Store only Stripe IDs on your side; do not store raw card data.</li>
+          <li>
+            Store only Stripe IDs on your side; do not store raw card data.
+          </li>
         </ul>
 
         <h2 className="text-2xl font-semibold theme-text-primary mt-8 mb-4">
