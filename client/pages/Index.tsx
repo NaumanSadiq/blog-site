@@ -152,7 +152,7 @@ export default function Index() {
             Full Stack Developer sharing knowledge and experiences
           </p>
           <div className="flex items-center justify-center gap-6 text-sm theme-text-secondary">
-            <span>Laravel • Angular • JavaScript • TypeScript</span>
+            <span>Laravel • Angular • JavaScript • TypeScript • React</span>
           </div>
         </div>
       </footer>

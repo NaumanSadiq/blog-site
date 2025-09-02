@@ -5,7 +5,7 @@ export const metadata: BlogMetadata = {
   title: "Managing State with Laravel and Angular: A Complete Guide",
   description:
     "Learn how to effectively manage state between Laravel backend and Angular frontend, including best practices for API design, data flow, and state management patterns.",
-  thumbnail: "/api/placeholder/800/400",
+  thumbnail: "/managing states using laravel and angular.png",
   author: "Nauman Sadiq",
   date: "2024-01-15",
   readTime: "8 min read",
