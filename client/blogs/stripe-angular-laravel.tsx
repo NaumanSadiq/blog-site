@@ -5,7 +5,7 @@ export const metadata: BlogMetadata = {
   title: "Stripe Payments with Angular and Laravel: Start to Finish",
   description:
     "Implement secure card payments using Stripe with Angular (latest) and Laravel (latest). Covers setup, Payment Intents, Elements, webhooks, and testing.",
-  thumbnail: "/api/placeholder/800/400",
+  thumbnail: "/stripe payments with angualr and laravel.png",
   author: "Nauman Sadiq",
   date: "2025-09-02",
   readTime: "12 min read",
